@@ -8,7 +8,7 @@ The goal is to **recover a frontal face image of the same person from a single f
 `config\params.json`
 
 ### Dataset stuctures
-`
+```
 |----dataset
         |----train
         |       |----train_img
@@ -30,7 +30,7 @@ The goal is to **recover a frontal face image of the same person from a single f
                         |----001_01_01_010.5pt
                         |----001_01_01_051.5pt
                         |---- …
-`
+```
 
 ### Train 
 `train.py`
