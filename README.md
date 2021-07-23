@@ -4,10 +4,11 @@ Official TP-GAN Tensorflow implementation for the ICCV17 paper "[Beyond Face Rot
 
 The goal is to **recover a frontal face image of the same person from a single face image under any poses**.
 
-###Params setting
+### Params setting
 `config\params.json`
 
-###Dataset stuctures
+### Dataset stuctures
+`
 |----dataset
         |----train
         |       |----train_img
@@ -29,11 +30,12 @@ The goal is to **recover a frontal face image of the same person from a single f
                         |----001_01_01_010.5pt
                         |----001_01_01_051.5pt
                         |---- …
+`
 
-###Train 
+### Train 
 `train.py`
 Using the option `--checkpoint` to load checkpoint (default = True)
 
-###Test
+### Test
 `my_test.py`
 
