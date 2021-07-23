@@ -4,36 +4,8 @@ import tensorflow as tf
 
 from tensorflow.python.framework import ops
 
-from utils import *
+#from utils import *
 
-# try:
-#     image_summary = tf.image_summary
-#     scalar_summary = tf.scalar_summary
-#     histogram_summary = tf.histogram_summary
-#     merge_summary = tf.merge_summary
-#     SummaryWriter = tf.train.SummaryWriter
-# except:
-image_summary = tf.summary.image
-scalar_summary = tf.summary.scalar
-histogram_summary = tf.summary.histogram
-merge_summary = tf.summary.merge
-SummaryWriter = tf.summary.FileWriter
-
-# class batch_norm(object):
-#     def __init__(self, epsilon=1e-5, momentum = 0.9, name="batch_norm"):
-#         with tf.variable_scope(name):
-#             self.epsilon  = epsilon
-#             self.momentum = momentum
-#             self.name = name
-#
-#     def __call__(self, x, train=True):
-#         return tf.contrib.layers.batch_norm(x,
-#                                             decay=self.momentum,
-#                                             updates_collections=None,
-#                                             epsilon=self.epsilon,
-#                                             scale=True,
-#                                             is_training=train,
-#                                             scope=self.name)
 def batch_norm(x,epsilon=1e-5, momentum = 0.9, name="batch_norm",train=True):
     return tf.contrib.layers.batch_norm(x,
                                         decay=momentum,
@@ -180,8 +152,8 @@ def linear(input_, output_size, scope=None, stddev=0.02, bias_start=0.0, with_w=
             return tf.matmul(input_, matrix) + bias
 def symL1(img):
     width = img.get_shape().as_list()[2]
-    right = img[:,:,width/2:,:]
-    left = tf.stop_gradient(img[:,:,0:width/2,:])
+    right = img[:,:,width//2:,:]
+    left = tf.stop_gradient(img[:,:,0:width//2,:])
     return tf.abs(left - right[:,:,::-1,:])
 
 def total_variation(images, name=None):

@@ -99,3 +99,13 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+#mine
+.git
+.idea
+checkpoint/*
+__pycache__/
+data-test/
+fit/
+export/*
+samples/*

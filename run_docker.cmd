@@ -1,0 +1,1 @@
+docker run -p 8501:8501 -v /d/I3/internship/export/tpgan:/models/tpgan -e MODEL_NAME=tpgan tensorflow/serving
