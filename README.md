@@ -4,6 +4,8 @@ Official TP-GAN Tensorflow implementation for the ICCV17 paper "[Beyond Face Rot
 
 The goal is to **recover a frontal face image of the same person from a single face image under any poses**.
 
+## THIS GIT FORKED FROM THE ORIGINAL GIT HERE (https://github.com/HRLTY/TP-GAN)
+
 ### Params setting
 `config\params.json`
 
